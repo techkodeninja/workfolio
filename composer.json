@@ -1,0 +1,48 @@
+{
+	"name": "techkodeninja/workfolio",
+	"type": "classicpress-theme",
+	"description": "Workfolio is a next-generation theme meticulously crafted for ClassicPress, delivering an unparalleled experience for showcasing your site's content.",
+	"keywords": [ "classicpress", "theme" ],
+	"homepage": "https://luthemes.com/portfolio/workfolio",
+	"license": "GPL-2.0-or-later",
+	"version": "1.0.0",
+	"authors": [
+		{
+			"name": "Benjamin Lu",
+			"email": "benlumia007@gmail.com",
+			"homepage": "https://luthemes.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Workfolio\\": "app"
+		}
+	},
+	"require": {
+		"php": ">=7.4",
+		"backdrop-dev/customize": "dev-develop",
+		"backdrop-dev/fonts": "dev-develop",
+		"backdrop-dev/framework": "dev-develop",
+		"backdrop-dev/languages": "dev-develop",
+		"backdrop-dev/mix": "dev-develop",
+		"backdrop-dev/pagination": "dev-develop",
+		"backdrop-dev/template-hierarchy": "dev-develop",
+		"backdrop-dev/template-manager": "dev-develop",
+		"backdrop-dev/theme": "dev-develop",
+		"backdrop-dev/view": "dev-develop"
+	},
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "*",
+		"wptrt/wpthemereview": "*",
+		"php-parallel-lint/php-parallel-lint": "*"
+	},
+	"scripts": {
+		"lint:wpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs .",
+		"lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor ."
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
+}
