@@ -43,7 +43,6 @@ $theme->provider( Backdrop\View\Provider::class );
  * These are the additional providers that are crucial for the theme to operate before booting
  * the application. These service providers offer supplementary features to the theme.
  */
-// $theme->provider( Workfolio\Portfolio\Meta\Provider::class );
 $theme->provider( Workfolio\Portfolio\Themes\Provider::class );
 $theme->provider( Workfolio\Portfolio\Widget\Provider::class );
 
