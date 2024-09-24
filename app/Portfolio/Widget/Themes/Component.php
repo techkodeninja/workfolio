@@ -9,7 +9,7 @@ class Component extends WP_Widget {
 	public function __construct() {
 		$widget_options = [
 			'classname' => 'theme_widget',
-			'description' => __('A widget to output theme information if a slug is set through the meta box.', 'succotash'),
+			'description' => __('A widget to output theme information if a slug is set through the meta box.', 'workfolio'),
 		];
 
 		parent::__construct('portfolio_theme_info', 'Theme Info', $widget_options);
@@ -19,7 +19,7 @@ class Component extends WP_Widget {
 		$title = ! empty( $instance['title'] ) ? $instance['title'] : '';
 		?>
 		<p>
-			<label for="<?php echo esc_attr( $this->get_field_id('title' ) ); ?>"><?php esc_html_e('Title: ', 'succotash' ); ?></label><br />
+			<label for="<?php echo esc_attr( $this->get_field_id('title' ) ); ?>"><?php esc_html_e('Title: ', 'workfolio' ); ?></label><br />
 			<input class="widefat" type="text" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" value="<?php echo esc_attr($title); ?>">
 		</p>
 		<?php

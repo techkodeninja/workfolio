@@ -6,7 +6,7 @@
  * @author    Benjamin Lu <benlumia007@gmail.com>
  * @copyright 2023. Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
- * @link      https://github.com/benlumia007/backdrop-custom-portfolio
+ * @link      https://github.com/benlumia007/workfolio
  */
 
 namespace Workfolio\Portfolio\Themes;
@@ -35,8 +35,8 @@ class Component implements Bootable {
 		// Create the settings page.
 		$this->settings_page = add_submenu_page(
 			'edit.php?post_type=' . 'portfolio',
-			esc_html__( 'ClassicPress Settings', 'backdrop-custom-portfolio' ),
-			esc_html__( 'ClassicPress', 'backdrop-custom-portfolio' ),
+			esc_html__( 'ClassicPress Settings', 'workfolio' ),
+			esc_html__( 'ClassicPress', 'workfolio' ),
 			'manage_options',
 			'cp-settings',
 			array( $this, 'settings_page' )
@@ -114,7 +114,7 @@ class Component implements Bootable {
 	 */
 	public function section_general() { ?>
 		<p class="description">
-			<?php esc_html_e( 'General portfolio settings for your site.', 'backdrop-custom-portfolio' ); ?>
+			<?php esc_html_e( 'General portfolio settings for your site.', 'workfolio' ); ?>
 		</p>
 	<?php }
 
