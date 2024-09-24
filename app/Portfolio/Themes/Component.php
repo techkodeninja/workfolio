@@ -243,7 +243,7 @@ class Component implements Bootable {
             echo '</tr>';
             echo '<tr>';
             echo '<th style="text-align: left;">' . esc_html__( 'Repository: ', 'workfolio' ) . '</th>';
-            echo '<td style="text-align: right;"><a href="' . esc_url( $base_url ) . '">' . esc_html__( 'Github', 'workfolio' ). '</a></td>';
+            echo '<td style="text-align: right;"><a href="' . esc_url( $base_url ) . '">' . esc_html__( 'GitHub', 'workfolio' ). '</a></td>';
             echo '</tr>';
             echo '<tr>';
             echo '<th style="text-align: left;">' . esc_html__( 'Active Installs ', 'workfolio' ) . '</th>';
