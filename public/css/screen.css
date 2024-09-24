@@ -1,1 +1,28 @@
-.theme-info{border-collapse:collapse;font-size:.875rem;width:100%}.theme-info td,.theme-info th{border-bottom:1px solid #e0e0e0;padding:.5rem}.theme-info th{color:#333;font-weight:700;text-align:left}.theme-info td{color:#555;text-align:right}.theme-info tr:last-child td{border-bottom:none;text-align:center}.theme-info a{color:#0073aa;text-decoration:none}.theme-info a:hover{text-decoration:underline}.theme-info button{background-color:#0073aa;border:none;border-radius:5px;color:#fff;cursor:pointer;font-size:.875rem;padding:.5rem 1rem}.theme-info button a{color:#fff;text-decoration:none}.theme-info button:hover{background-color:#005a8c}
+.theme_widget .widget-title {
+  display: none;
+}
+.theme_widget .theme-info {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem; /* Smaller font size */
+}
+.theme_widget .theme-info th, .theme_widget .theme-info td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #e3e3e3; /* Apply red border to both th and td */
+}
+.theme_widget .theme-info th {
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+}
+.theme_widget .theme-info td {
+  text-align: right; /* Aligns text to the right */
+  color: #555;
+}
+.theme_widget .theme-info a {
+  color: #0073aa;
+  text-decoration: none;
+}
+.theme_widget .theme-info a:hover {
+  text-decoration: underline;
+}

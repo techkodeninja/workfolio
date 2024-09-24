@@ -1,54 +1,39 @@
-.theme-info {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.875rem; /* Smaller font size */
-}
+.theme_widget {
 
-.theme-info th, .theme-info td {
-    padding: 0.5rem;
-    border-bottom: 1px solid #e0e0e0;
-}
+    .widget-title {
+        display: none;
+    }
 
-.theme-info th {
-    text-align: left;
-    font-weight: bold;
-    color: #333;
-}
+    .theme-info {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.875rem; /* Smaller font size */
+    }
+    
+    .theme-info th, .theme-info td {
+        padding: 0.5rem;
+        border-bottom: 1px solid #e3e3e3; /* Apply red border to both th and td */
+    }
+    
+    .theme-info th {
+        text-align: left;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    .theme-info td {
+        text-align: right; /* Aligns text to the right */
+        color: #555;
+    }
 
-.theme-info td {
-    text-align: right;
-    color: #555;
-}
 
-.theme-info tr:last-child td {
-    border-bottom: none;
-    text-align: center;
-}
-
-.theme-info a {
-    color: #0073aa;
-    text-decoration: none;
-}
-
-.theme-info a:hover {
-    text-decoration: underline;
-}
-
-.theme-info button {
-    background-color: #0073aa;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 0.875rem; /* Match button font size */
-}
-
-.theme-info button a {
-    color: white;
-    text-decoration: none;
-}
-
-.theme-info button:hover {
-    background-color: #005a8c;
+    
+    .theme-info a {
+        color: #0073aa;
+        text-decoration: none;
+    }
+    
+    .theme-info a:hover {
+        text-decoration: underline;
+    }
 }

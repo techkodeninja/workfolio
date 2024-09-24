@@ -249,15 +249,6 @@ class Component implements Bootable {
             echo '<th style="text-align: left;">' . esc_html__( 'Active Installs ', 'workfolio' ) . '</th>';
             echo '<td style="text-align: right;">' . esc_html( $active ) . '</td>';
             echo '</tr>';
-            echo '<tr>';
-            echo '<td colspan="2" style="text-align: center;">';
-            if ( ! empty( $download_link ) ) {
-                echo '<button class="button button-primary"><a style="color: white;" href="' . esc_url( $download_link ) . '">' . esc_html__( 'Download', 'workfolio' ) . '</a></button>';
-            } else {
-                echo '<button class="button button-primary" disabled>' . esc_html__( 'No Downloads Available', 'workfolio' ) . '</button>';
-            }
-            echo '</td>';
-            echo '</tr>';
             echo '</tbody>';
             echo '</table>';
         }
