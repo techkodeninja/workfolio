@@ -39,11 +39,11 @@ class Component extends WP_Widget {
 		$theme_component = new ThemeComponent();
 
 		ob_start();
-		echo wp_kses_post( $args['before_widget'] ) . wp_kses_post( $args['before_title'] ) . apply_filters( 'widget_title', $instance['title'] ) . wp_kses_post( $args['after_title'] );
+		echo wp_kses_post( $args['before_widget'] ) . wp_kses_post( $args['before_title'] ) . wp_kses_post( apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'] );
 
 		// Call the existing method to display the latest release for the current post's slug (repository)
 		$theme_component->display_latest_release( $slug );
 
-		echo $args['after_widget'];
+		echo wp_kses_post( $args['after_widget'] );
 	}
 }
