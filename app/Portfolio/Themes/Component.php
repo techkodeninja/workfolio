@@ -195,7 +195,7 @@ class Component implements Bootable {
         }
     
         if ( empty( $theme ) || is_wp_error( $theme ) ) {
-            echo '<div class="notice notice-info"><p>No theme data found for slug: ' . $repository . '</p></div>';
+            echo '<div class="notice notice-info"><p>No theme data found for slug: ' . esc_html( $repository ) . '</p></div>';
         } else {
             // Check if the theme data is an array (ClassicPress) or an object (WordPress)
             if ( is_array( $theme ) ) {
@@ -208,8 +208,8 @@ class Component implements Bootable {
                 $download_link = $theme_data['meta']['download_link'] ?? '';
                 $active = $theme_data['meta']['active_installations'] ?? 'N/A';
                 $published_at = $theme_data['meta']['published_at'] ?? '';
-                $last_updated = !empty( $published_at ) ? date( 'F d, Y', $published_at ) : 'N/A';
-                $parse_link = parse_url( $download_link );
+                $last_updated = !empty( $published_at ) ? gmdate( 'F d, Y', $published_at ) : 'N/A';
+                $parse_link = wp_parse_url( $download_link );
                 $path_segments = explode('/', $parse_link['path']);
                 $base_url = $parse_link['scheme'] . '://' . $parse_link['host'] . '/' . $path_segments[1] . '/' . $path_segments[2];
             } else {
@@ -222,7 +222,7 @@ class Component implements Bootable {
     
                 // Fetch active installs from the transient
                 $active = get_transient( 'luthemes_active_installs_' . $repository ) ?? 'N/A';
-                $last_updated = !empty( $theme->last_updated ) ? date( 'F d, Y', strtotime( $theme->last_updated ) ) : 'N/A';
+                $last_updated = !empty( $theme->last_updated ) ? gmdate( 'F d, Y', strtotime( $theme->last_updated ) ) : 'N/A';
             }
     
             // Display the theme information
